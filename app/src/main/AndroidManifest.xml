@@ -4,13 +4,12 @@
           package="com.relaxmusic.meditationapp">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
 
     <application
-            android:name="com.relaxmusic.meditationapp.ThisApplication"
+            android:name=".ThisApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -18,26 +17,31 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".view.onboarding.OnboardingActivity">
+        </activity>
+
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="@string/admob_account_id"/>
-        <activity android:name="com.relaxmusic.meditationapp.view.settings.SettingsActivity">
+
+        <activity android:name=".view.settings.SettingsActivity">
         </activity>
 
         <service
-                android:name="com.relaxmusic.meditationapp.background.sound.SoundService"
+                android:name=".background.sound.SoundService"
                 android:enabled="true"
                 android:exported="true"/>
 
         <activity
-                android:name="com.relaxmusic.meditationapp.view.soundCombination.SoundCombinationActivity"
+                android:name=".view.soundCombination.SoundCombinationActivity"
                 android:launchMode="singleTop"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name="com.relaxmusic.meditationapp.view.soundList.SoundListActivity"
+                android:name=".view.soundList.SoundListActivity"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

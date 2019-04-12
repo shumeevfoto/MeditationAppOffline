@@ -31,6 +31,9 @@
     <string name="t_2_hour">2 часа</string>
     <string name="t_4_hour">4 часа</string>
     <string name="t_8_hour">8 часов</string>
+    <string name="activity_onboarding_welcome">Добро пожаловать в приложение Медитации</string>
+    <string name="activity_onboarding_language">Выберите ваш язык</string>
+    <string name="activity_onboarding_next">Далее</string>
 
     <string name="rate_toast_thanks">Спасибо за ваши 5 звезд!</string>
     <string name="activity_settings_settings">Настройки</string>

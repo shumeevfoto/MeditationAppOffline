@@ -4,7 +4,6 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.android.billingclient.api.*
 import com.android.billingclient.api.BillingClient.BillingResponse
 import com.relaxmusic.meditationapp.*
@@ -106,7 +105,8 @@ class SettingsActivity : BaseActivity(), PurchasesUpdatedListener {
             billingClient.querySkuDetailsAsync(params) { responseCode, skuDetailsList ->
                 if (responseCode == BillingClient.BillingResponse.OK) {
                     try {
-                        tv_disable_ads.text = getString(R.string.activity_settings_disable_ads).format(skuDetailsList[0].price)
+                        tv_disable_ads.text =
+                                getString(R.string.activity_settings_disable_ads).format(skuDetailsList[0].price)
                         println("querySkuDetailsAsync, responseCode: $responseCode")
                         tv_disable_ads.setOnClickListener {
 

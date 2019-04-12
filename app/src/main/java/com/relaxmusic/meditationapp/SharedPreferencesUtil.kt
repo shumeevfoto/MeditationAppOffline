@@ -10,6 +10,9 @@ fun SharedPreferences.setLanguage(locale: String) = edit().putString("lang", loc
 
 fun SharedPreferences.setPurchased(purchased: Boolean) = edit().putBoolean("purchased", purchased).apply()
 
+fun SharedPreferences.setPolicyAccepted(accepted: Boolean) = edit().putBoolean("policyAccepted", accepted).apply()
+
+
 fun SharedPreferences.newSound(soundId: String) {
     edit().putString("generalSound", soundId).apply()
     edit().putStringSet("sounds", setOf()).apply()
@@ -34,3 +37,5 @@ fun SharedPreferences.isPurchased() = getBoolean("purchased", false)
 fun SharedPreferences.getAdditionalSounds() = getStringSet("sounds", setOf())
 
 fun SharedPreferences.getGeneralSound() = getString("generalSound", "")
+
+fun SharedPreferences.getPolicyAccepted() = getBoolean("policyAccepted", false)

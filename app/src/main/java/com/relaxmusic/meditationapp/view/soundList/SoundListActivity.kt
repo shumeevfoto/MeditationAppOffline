@@ -6,6 +6,7 @@ import com.google.android.gms.ads.MobileAds
 import com.relaxmusic.meditationapp.*
 import com.relaxmusic.meditationapp.background.sound.SoundService
 import com.relaxmusic.meditationapp.base.BaseActivity
+import com.relaxmusic.meditationapp.view.onboarding.OnboardingActivity
 import com.relaxmusic.meditationapp.view.settings.SettingsActivity
 import com.relaxmusic.meditationapp.view.soundCombination.SoundCombinationActivity
 import kotlinx.android.synthetic.main.activity_sound_list.*
@@ -24,6 +25,10 @@ class SoundListActivity : BaseActivity() {
             getString(R.string.admob_account_id)
         )
 
+
+        if (!preferences().getPolicyAccepted()) {
+            startActivity<OnboardingActivity>()
+        }
 
         if (preferences().isPurchased()) {
         } else {

@@ -45,6 +45,9 @@
     <string name="t_2_hour">2 hours</string>
     <string name="t_4_hour">4 hours</string>
     <string name="t_8_hour">8 hours</string>
+    <string name="activity_onboarding_welcome">Welcome to Meditation App Message</string>
+    <string name="activity_onboarding_language">Choose your language</string>
+    <string name="activity_onboarding_next">Next</string>
     <!--Strings to translate-->
 
     <!--Google Pay product id-->

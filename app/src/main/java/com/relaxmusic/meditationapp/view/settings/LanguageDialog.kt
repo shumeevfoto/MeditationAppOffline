@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.RadioButton
 import com.relaxmusic.meditationapp.*
+import com.relaxmusic.meditationapp.base.BaseActivity
 import kotlinx.android.synthetic.main.language_dialog_layout.*
 
 
-class LanguageDialog(val context: SettingsActivity) : Dialog(context) {
+class LanguageDialog(val context: BaseActivity) : Dialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
