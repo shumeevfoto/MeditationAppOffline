@@ -48,13 +48,13 @@
     <!--Strings to translate-->
 
     <!--Google Pay product id-->
-    <string name="disable_ads_google_pay_id" translatable="false">disable_ads</string>
+    <string name="disable_ads_google_pay_id" translatable="false">no_ads</string>
     <!--Admob-->
     <string name="admob_account_id" translatable="false">ca-app-pub-4546234049557556~6376836083</string>
     <string name="admob_banner_id" translatable="false">ca-app-pub-4546234049557556/4437068452</string>
 
     <!--YandexMetrica-->
-    <string name="yandex_metrica_id">f7fcce89-8de4-4f05-9814-9f65e62752c9</string>
+    <string name="yandex_metrica_id" translatable="false">f7fcce89-8de4-4f05-9814-9f65e62752c9</string>
 
     <!--Add sounds titles below-->
     <string name="id_w00ds">Woods</string>

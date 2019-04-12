@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.billingclient.api.*
 import com.android.billingclient.api.BillingClient.BillingResponse
 import com.relaxmusic.meditationapp.*
+import com.relaxmusic.meditationapp.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_settings.*
+import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
 
 
-class SettingsActivity : AppCompatActivity(), PurchasesUpdatedListener {
+class SettingsActivity : BaseActivity(), PurchasesUpdatedListener {
 
 
     lateinit var skuList: List<String>
@@ -103,11 +105,12 @@ class SettingsActivity : AppCompatActivity(), PurchasesUpdatedListener {
                 .build()
             billingClient.querySkuDetailsAsync(params) { responseCode, skuDetailsList ->
                 if (responseCode == BillingClient.BillingResponse.OK) {
-
                     try {
                         tv_disable_ads.text = getString(R.string.activity_settings_disable_ads).format(skuDetailsList[0].price)
                         println("querySkuDetailsAsync, responseCode: $responseCode")
                         tv_disable_ads.setOnClickListener {
+
+                            info { skuDetailsList.size.toString() }
                             val billingFlowParams = BillingFlowParams
                                 .newBuilder()
                                 .setSkuDetails(skuDetailsList[0])
