@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="64dp"
+             tools:background="@color/black"
+             android:layout_height="64dp">
+    <ImageView
+            android:layout_width="64dp"
+            android:background="@drawable/button_white_circle_border"
+            android:layout_height="64dp"/>
+    <ImageView
+            android:layout_width="64dp"
+            android:id="@+id/iv_timer"
+            android:padding="10dp"
+            android:src="@drawable/ic_timer_white_32dp"
+            android:layout_height="64dp"/>
+    <TextView
+            android:layout_width="54dp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_timer"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:text="04:56"
+            android:gravity="center"
+            android:background="@drawable/button_white_circle_background"
+            android:layout_height="54dp"/>
+</FrameLayout>

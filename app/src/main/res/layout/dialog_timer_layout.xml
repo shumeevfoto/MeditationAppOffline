@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="260dp"
+              android:background="@color/white"
+              android:padding="16dp"
+              android:layout_gravity="center"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/dialog_timer_layout_set_timer_duration"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RadioGroup
+                android:id="@+id/rg_holder"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"/>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

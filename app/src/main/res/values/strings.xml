@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name" translatable="true">Meditation Music Offline</string>
+
+
+    <!--Language-->
+
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_ru" translatable="false">Русский</string>
+    <string name="lang_es" translatable="false">Español</string>
+
+    <!--Play Market developer link-->
+    <string name="play_market_developer_id" translatable="false">RelaxMusic</string>
+    <!--Terms of use link-->
+    <string name="terms_of_use_link" translatable="false">http://relaxmusic.club/privacy/</string>
+    <!--Play market app link-->
+    <string name="play_market_app_id" translatable="false">com.relaxmusic.meditationapp</string>
+
+    <!--Strings to translate-->
+    <string name="rate_toast_thanks">Thanks for your 5 stars!</string>
+    <string name="activity_settings_settings">Settings</string>
+    <string name="activity_settings_support_us">Support us</string>
+    <string name="activity_settings_disable_ads">Disable ads for %s</string>
+    <string name="activity_settings_rate_us">Rate us</string>
+    <string name="activity_settings_language">Language</string>
+    <string name="activity_settings_more_sounds">More sounds?</string>
+    <string name="activity_settings_more_free_sounds">More free sounds</string>
+    <string name="activity_settings_terms_of_use_and_privacy_policy">Terms of Use and Privacy Policy</string>
+    <string name="activity_sound_list_meditation_music">Meditation music</string>
+    <string name="add_new_sound_layout_add_new_sound">Add new sound</string>
+    <string name="dialog_timer_layout_set_timer_duration">Set timer duration</string>
+    <string name="language_dialog_layout_language">Language</string>
+    <string name="sound_list_dialog_layout_close">Close</string>
+    <string name="sound_service_push_layout_music_for_meditation">Music for meditation</string>
+    <string name="sound_service_push_layout_playing">Playing</string>
+    <string name="volume_manager_dialog_layout_system_volume">System volume</string>
+    <string name="already_bought">Already bought</string>
+    <string name="no_timer">No timer</string>
+    <string name="t_5_min">5 minutes</string>
+    <string name="t_10_min">10 minutes</string>
+    <string name="t_15_min">15 minutes</string>
+    <string name="t_20_min">20 minutes</string>
+    <string name="t_30_min">30 minutes</string>
+    <string name="t_40_min">40 minutes</string>
+    <string name="t_1_hour">1 hour</string>
+    <string name="t_2_hour">2 hours</string>
+    <string name="t_4_hour">4 hours</string>
+    <string name="t_8_hour">8 hours</string>
+    <!--Strings to translate-->
+
+    <!--Google Pay product id-->
+    <string name="disable_ads_google_pay_id" translatable="false">disable_ads</string>
+    <!--Admob-->
+    <string name="admob_account_id" translatable="false">ca-app-pub-4546234049557556~6376836083</string>
+    <string name="admob_banner_id" translatable="false">ca-app-pub-4546234049557556/4437068452</string>
+
+    <!--YandexMetrica-->
+    <string name="yandex_metrica_id">f7fcce89-8de4-4f05-9814-9f65e62752c9</string>
+
+    <!--Add sounds titles below-->
+    <string name="id_w00ds">Woods</string>
+    <string name="id_w00ds1">Woods1</string>
+    <string name="id_cave">Sea cave</string>
+    <string name="id_lake">Fishing on the lake</string>
+    <string name="id_forest">Spring forest</string>
+    <string name="id_jungle">Tropical jungle</string>
+    <string name="id_night">Night forest</string>
+    <string name="id_rain">Pouring rain</string>
+    <string name="id_winter">Winter night</string>
+
+    <string name="id_category_drum">Drums</string>
+    <string name="id_category_guitar">Guitar</string>
+    <string name="id_category_animals">Animals</string>
+    <string name="id_category_nature">Nature</string>
+    <string name="id_category_instruments">Musical instruments</string>
+</resources>

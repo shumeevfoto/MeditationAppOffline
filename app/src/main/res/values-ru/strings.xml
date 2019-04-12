@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="true">Музыка для медитации без интернета</string>
+
+    <string name="id_w00ds">Лес</string>
+    <string name="id_w00ds1">Лес1</string>
+    <string name="id_cave">Морская пещера</string>
+    <string name="id_lake">Рыбалка на озере</string>
+    <string name="id_forest">Весенний лес</string>
+    <string name="id_jungle">Тропические джунгли</string>
+    <string name="id_night">Ночной лес</string>
+    <string name="id_rain">Проливной дождь</string>
+    <string name="id_winter">Зимняя ночь</string>
+
+
+    <string name="id_category_animals">Животные</string>
+    <string name="id_category_drum">Барабаны</string>
+    <string name="id_category_guitar">Гитара</string>
+    <string name="id_category_nature">Природа</string>
+    <string name="id_category_instruments">Музыкальные инструменты</string>
+
+    <string name="no_timer">Без таймера</string>
+    <string name="t_5_min">5 минут</string>
+    <string name="t_10_min">10 минут</string>
+    <string name="t_15_min">15 минут</string>
+    <string name="t_20_min">20 минут</string>
+    <string name="t_30_min">30 минут</string>
+    <string name="t_40_min">40 минут</string>
+    <string name="t_1_hour">1 час</string>
+    <string name="t_2_hour">2 часа</string>
+    <string name="t_4_hour">4 часа</string>
+    <string name="t_8_hour">8 часов</string>
+
+    <string name="rate_toast_thanks">Спасибо за ваши 5 звезд!</string>
+    <string name="activity_settings_settings">Настройки</string>
+    <string name="activity_settings_support_us">Поддержите нас</string>
+    <string name="activity_settings_disable_ads">Отключить рекламу за %s</string>
+    <string name="activity_settings_rate_us">Оценить нас</string>
+    <string name="activity_settings_language">Язык</string>
+    <string name="activity_settings_more_sounds">Больше звуков?</string>
+    <string name="activity_settings_more_free_sounds">Больше бесплатных приложений</string>
+    <string name="activity_settings_terms_of_use_and_privacy_policy">Terms of Use and Privacy Policy</string>
+    <string name="activity_sound_list_meditation_music">Музыка для медитации</string>
+    <string name="add_new_sound_layout_add_new_sound">Добавить новый звук</string>
+    <string name="dialog_timer_layout_set_timer_duration">Выбрать длительность таймера</string>
+    <string name="language_dialog_layout_language">Язык</string>
+    <string name="sound_list_dialog_layout_close">Закрыть</string>
+    <string name="sound_service_push_layout_music_for_meditation">Музыка для медитации</string>
+    <string name="sound_service_push_layout_playing">Воспроизводиться</string>
+    <string name="volume_manager_dialog_layout_system_volume">Громкость системы</string>
+    <string name="already_bought">Уже куплено</string>
+</resources>

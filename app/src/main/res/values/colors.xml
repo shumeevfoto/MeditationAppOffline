@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#858585</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="shade_start">#54000000</color>
+
+    <color name="grey">#c4c4c4</color>
+    <color name="green">#00897B</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="settings_item_background_color">#25FFFFFF</color>
+
+    <!--Add color for sounds below-->
+
+    <color name="id_w00ds1_text">#5B2C63</color>
+    <color name="id_w00ds1">#BA68C8</color>
+    <color name="id_cave_text">#5A3361</color>
+    <color name="id_cave">#9575CD</color>
+    <color name="id_forest_text">#224657</color>
+    <color name="id_forest">#4DD0E1</color>
+    <color name="id_jungle_text">#235550</color>
+    <color name="id_jungle">#52B6AD</color>
+    <color name="id_lake_text">#81C784</color>
+    <color name="id_lake">#213A22</color>
+    <color name="id_night_text">#453C53</color>
+    <color name="id_night">#D1C4E9</color>
+    <color name="id_rain_text">#3E5355</color>
+    <color name="id_rain">#B2EBF2</color>
+    <color name="id_train_text">#524C20</color>
+    <color name="id_train">#FFF6D4</color>
+    <color name="id_winter_text">#8A5200</color>
+    <color name="id_winter">#FFF6D4</color>
+
+
+</resources>

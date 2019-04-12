@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.settings.SettingsActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/settings_background"
+            android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_settings"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:background="@color/settings_item_background_color"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_support_us"
+                android:paddingBottom="5dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_disable_ads"
+                android:id="@+id/tv_disable_ads"
+                android:background="@color/settings_item_background_color"
+                android:padding="16dp"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="@string/activity_settings_rate_us"
+                android:id="@+id/tv_rate_us"
+                android:background="@color/settings_item_background_color"
+                android:padding="16dp"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_language"
+                android:paddingBottom="5dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/lang_en"
+                android:background="@color/settings_item_background_color"
+                android:padding="16dp"
+                android:textSize="17sp"
+                android:id="@+id/tv_language"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_more_sounds"
+                android:paddingBottom="5dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:text="@string/activity_settings_more_free_sounds"
+                android:id="@+id/tv_play_market"
+                android:background="@color/settings_item_background_color"
+                android:padding="16dp"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:text="@string/activity_settings_terms_of_use_and_privacy_policy"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_terms_of_use"
+            android:padding="16dp"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

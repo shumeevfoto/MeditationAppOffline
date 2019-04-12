@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="true">Música para meditación offline</string>
+
+    <string name="id_w00ds">Лес</string>
+    <string name="id_w00ds1">Лес1</string>
+    <string name="id_cave">Cueva del mar</string>
+    <string name="id_lake">Pesca en el lago</string>
+    <string name="id_forest">Bosque de primavera</string>
+    <string name="id_jungle">Selva tropical</string>
+    <string name="id_night">Bosque nocturno</string>
+    <string name="id_rain">Fuertes lluvias</string>
+    <string name="id_winter">Noche de invierno</string>
+
+
+    <string name="id_category_animals">Los animales</string>
+    <string name="id_category_drum">Tambores</string>
+    <string name="id_category_guitar">Guitarra</string>
+    <string name="id_category_nature">La naturaleza</string>
+    <string name="id_category_instruments">Instrumentos musicales</string>
+
+    <string name="no_timer">Sin temporizador</string>
+    <string name="t_5_min">5 minutos</string>
+    <string name="t_10_min">10 minutos</string>
+    <string name="t_15_min">15 minutos</string>
+    <string name="t_20_min">20 minutos</string>
+    <string name="t_30_min">30 minutos</string>
+    <string name="t_40_min">40 minutos</string>
+    <string name="t_1_hour">1 hora</string>
+    <string name="t_2_hour">2 hora</string>
+    <string name="t_4_hour">4 hora</string>
+    <string name="t_8_hour">8 hora</string>
+
+    <string name="rate_toast_thanks">Gracias por tus 5 estrellas!</string>
+    <string name="activity_settings_settings">Ajustes</string>
+    <string name="activity_settings_support_us">Apóyanos</string>
+    <string name="activity_settings_disable_ads">Deshabilitar anuncios para %s</string>
+    <string name="activity_settings_rate_us">Califíquenos</string>
+    <string name="activity_settings_language">Idioma</string>
+    <string name="activity_settings_more_sounds">Más sonidos?</string>
+    <string name="activity_settings_more_free_sounds">Más aplicaciones gratuitas</string>
+    <string name="activity_settings_terms_of_use_and_privacy_policy">Términos de uso y política de privacidad</string>
+    <string name="activity_sound_list_meditation_music">Musica de meditacion</string>
+    <string name="add_new_sound_layout_add_new_sound">Añadir nuevo sonido</string>
+    <string name="dialog_timer_layout_set_timer_duration">Seleccione la duración del temporizador</string>
+    <string name="language_dialog_layout_language">Idioma</string>
+    <string name="sound_list_dialog_layout_close">Cerrar</string>
+    <string name="sound_service_push_layout_music_for_meditation">Musica de meditacion</string>
+    <string name="sound_service_push_layout_playing">Reproducir</string>
+    <string name="volume_manager_dialog_layout_system_volume">Volumen del sistema</string>
+    <string name="already_bought">Ya comprado</string>
+</resources>

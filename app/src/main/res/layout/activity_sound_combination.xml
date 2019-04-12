@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/black"
+        tools:context=".view.soundCombination.SoundCombinationActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/iv_background"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            tools:text="Woods"
+            android:gravity="center"
+            android:id="@+id/tv_title"
+            android:textSize="22sp"
+            android:background="@color/transparent"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:elevation="5dp"
+            android:layout_height="64dp"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tv_title"
+            android:id="@+id/v_shadow"
+            android:background="@drawable/toolbar_shade"
+            android:layout_height="10dp"/>
+
+    <com.relaxmusic.meditationapp.view.soundCombination.combineViews.CombineSoundView
+            android:layout_width="match_parent"
+            android:id="@+id/combine_sounds"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/v_shadow"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/sb_volume"
+            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="64dp"
+                android:id="@+id/b_stop"
+                android:layout_marginEnd="16dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_pause_white_32dp"
+                android:background="@drawable/button_white_circle_border"
+                android:layout_height="64dp"/>
+
+        <com.relaxmusic.meditationapp.view.soundCombination.timer.TimerButton
+                android:layout_width="wrap_content"
+                android:id="@+id/b_timer"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <SeekBar
+            android:layout_width="match_parent"
+            android:id="@+id/sb_volume"
+            tools:progress="50"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_above="@id/banner"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"/>
+
+    <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/admob_banner_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
