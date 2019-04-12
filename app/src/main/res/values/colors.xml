@@ -12,7 +12,10 @@
     <color name="white">#fff</color>
     <color name="transparent">#00ffffff</color>
 
-    <color name="settings_item_background_color">#25FFFFFF</color>
+
+    <color name="dialog_rate_bg">#DD5283</color>
+
+    <color name="settings_item_background_color">#39FFFFFF</color>
 
     <!--Add color for sounds below-->
 

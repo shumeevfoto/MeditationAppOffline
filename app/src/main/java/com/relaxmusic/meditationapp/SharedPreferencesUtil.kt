@@ -12,6 +12,8 @@ fun SharedPreferences.setPurchased(purchased: Boolean) = edit().putBoolean("purc
 
 fun SharedPreferences.setPolicyAccepted(accepted: Boolean) = edit().putBoolean("policyAccepted", accepted).apply()
 
+fun SharedPreferences.setTimeToShowRate(time: Long) = edit().putLong("timeToShowRate", time).apply()
+
 
 fun SharedPreferences.newSound(soundId: String) {
     edit().putString("generalSound", soundId).apply()
@@ -39,3 +41,4 @@ fun SharedPreferences.getAdditionalSounds() = getStringSet("sounds", setOf())
 fun SharedPreferences.getGeneralSound() = getString("generalSound", "")
 
 fun SharedPreferences.getPolicyAccepted() = getBoolean("policyAccepted", false)
+fun SharedPreferences.getTimeToShowRate() = getLong("timeToShowRate", -1)

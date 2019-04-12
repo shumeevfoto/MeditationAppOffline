@@ -48,6 +48,8 @@
     <string name="activity_onboarding_welcome">Welcome to Meditation App Message</string>
     <string name="activity_onboarding_language">Choose your language</string>
     <string name="activity_onboarding_next">Next</string>
+    <string name="rate_dialog_layout_message">Please, rate our app message</string>
+    <string name="rate_dialog_layout_rate">Rate</string>
     <!--Strings to translate-->
 
     <!--Google Pay product id-->

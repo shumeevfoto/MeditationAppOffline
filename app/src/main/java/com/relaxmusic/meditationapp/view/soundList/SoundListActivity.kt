@@ -14,6 +14,10 @@ import org.jetbrains.anko.startActivity
 
 class SoundListActivity : BaseActivity() {
 
+
+    // milisec * sec * min * hours * days
+    val TIME_TO_NEXT_RATE_MESSAGE = 1000 * 60 * 60 * 24 * 3
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setLanguage(preferences().getLanguage())
         super.onCreate(savedInstanceState)
@@ -28,6 +32,12 @@ class SoundListActivity : BaseActivity() {
 
         if (!preferences().getPolicyAccepted()) {
             startActivity<OnboardingActivity>()
+            preferences().setTimeToShowRate(System.currentTimeMillis() + TIME_TO_NEXT_RATE_MESSAGE)
+        }
+
+        if (preferences().getPolicyAccepted() && preferences().getTimeToShowRate() < System.currentTimeMillis()) {
+            RateDialog(this).show()
+            preferences().setTimeToShowRate(System.currentTimeMillis() + TIME_TO_NEXT_RATE_MESSAGE)
         }
 
         if (preferences().isPurchased()) {
