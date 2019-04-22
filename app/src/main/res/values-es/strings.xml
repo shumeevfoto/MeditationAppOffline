@@ -32,6 +32,12 @@
     <string name="t_4_hour">4 hora</string>
     <string name="t_8_hour">8 hora</string>
 
+    <string name="activity_onboarding_welcome">Bienvenido a Meditation App Message</string>
+    <string name="activity_onboarding_language">Elige tu idioma</string>
+    <string name="activity_onboarding_next">Siguiente</string>
+    <string name="rate_dialog_layout_message">Por favor, califique nuestro mensaje de aplicación</string>
+    <string name="rate_dialog_layout_rate">Tarifa</string>
+
     <string name="rate_toast_thanks">Gracias por tus 5 estrellas!</string>
     <string name="activity_settings_settings">Ajustes</string>
     <string name="activity_settings_support_us">Apóyanos</string>

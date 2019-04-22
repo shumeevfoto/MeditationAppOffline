@@ -61,6 +61,10 @@
     <!--YandexMetrica-->
     <string name="yandex_metrica_id" translatable="false">f7fcce89-8de4-4f05-9814-9f65e62752c9</string>
 
+    <!--Facebook Dev Id-->
+    <string name="facebook_app_id" translatable="false">1341432766062936</string>
+
+
     <!--Add sounds titles below-->
     <string name="id_w00ds">Woods</string>
     <string name="id_w00ds1">Woods1</string>
