@@ -19,7 +19,7 @@ class SettingsActivity : BaseActivity(), PurchasesUpdatedListener {
     lateinit var skuList: List<String>
 
     override fun onPurchasesUpdated(responseCode: Int, purchases: MutableList<Purchase>?) {
-        if (responseCode == BillingResponse.OK) {
+        if (responseCode == BillingResponse.OK || responseCode == BillingResponse.ITEM_ALREADY_OWNED) {
             preferences().setPurchased(true)
             tv_disable_ads.text = getString(R.string.already_bought)
             tv_disable_ads.setOnClickListener {
