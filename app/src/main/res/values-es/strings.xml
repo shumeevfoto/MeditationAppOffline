@@ -56,4 +56,5 @@
     <string name="sound_service_push_layout_playing">Reproducir</string>
     <string name="volume_manager_dialog_layout_system_volume">Volumen del sistema</string>
     <string name="already_bought">Ya comprado</string>
+    <string name="sound_view_holder_layout_open_after_ad">Open after ad</string>
 </resources>
