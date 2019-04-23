@@ -14,6 +14,13 @@ fun SharedPreferences.setPolicyAccepted(accepted: Boolean) = edit().putBoolean("
 
 fun SharedPreferences.setTimeToShowRate(time: Long) = edit().putLong("timeToShowRate", time).apply()
 
+fun SharedPreferences.addUnlockedSound(soundId: String) {
+    val set = getUnlockedSounds().toMutableSet()?.apply {
+        add(soundId)
+    }
+    edit().putStringSet("unlockedSounds", set).apply()
+}
+
 
 fun SharedPreferences.newSound(soundId: String) {
     edit().putString("generalSound", soundId).apply()
@@ -33,6 +40,8 @@ fun SharedPreferences.removeSound(soundId: String) {
 }
 
 fun SharedPreferences.getLanguage() = getString("lang", "en")
+
+fun SharedPreferences.getUnlockedSounds() = getStringSet("unlockedSounds", setOf()) ?: setOf()
 
 fun SharedPreferences.isPurchased() = getBoolean("purchased", false)
 

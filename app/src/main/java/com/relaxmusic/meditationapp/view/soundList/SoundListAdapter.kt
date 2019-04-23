@@ -12,12 +12,13 @@ import com.relaxmusic.meditationapp.view.soundCombination.SoundCombinationActivi
 import kotlinx.android.synthetic.main.sound_view_holder_layout.view.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.textColor
+import org.jetbrains.anko.toast
 
 
-class SoundListAdapter(private val assetManager: AssetManager) :
+class SoundListAdapter(private val assetManager: AssetManager, val activity: SoundListActivity) :
     RecyclerView.Adapter<SoundListAdapter.SoundViewHolder>() {
 
-    private val soundsIds = assetManager.getSounds() ?: emptyArray()
+    val soundsIds = assetManager.getSounds() ?: emptyArray()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SoundViewHolder {
         return SoundViewHolder(
@@ -51,8 +52,18 @@ class SoundListAdapter(private val assetManager: AssetManager) :
                 iv_sound_image.borderColor = context.getSoundBorderColor(soundId)
                 iv_sound_image.setImageBitmap(assetManager.getSoundImage(soundId))
 
+                if (activity.isLocked(soundId)) {
+                    holder_music_lock.visible()
+                } else {
+                    holder_music_lock.gone()
+                }
+
                 setOnClickListener {
-                    context.startActivity<SoundCombinationActivity>("soundId" to soundId)
+                    if (activity.isLocked(soundId)) {
+                        activity.openLockedSound(soundId)
+                    } else {
+                        activity.openUnlockedSound(soundId)
+                    }
                 }
 
             }

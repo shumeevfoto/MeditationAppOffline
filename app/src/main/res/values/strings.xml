@@ -57,6 +57,8 @@
     <!--Admob-->
     <string name="admob_account_id" translatable="false">ca-app-pub-4546234049557556~6376836083</string>
     <string name="admob_banner_id" translatable="false">ca-app-pub-4546234049557556/4437068452</string>
+    <string name="admob_initaial_interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_initaial_sound_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
 
     <!--YandexMetrica-->
     <string name="yandex_metrica_id" translatable="false">f7fcce89-8de4-4f05-9814-9f65e62752c9</string>
