@@ -19,6 +19,7 @@ import androidx.core.app.NotificationCompat
 import com.relaxmusic.meditationapp.*
 import com.relaxmusic.meditationapp.base.BaseService
 import com.relaxmusic.meditationapp.view.soundCombination.SoundCombinationActivity
+import java.lang.NullPointerException
 
 
 class SoundService : BaseService() {
@@ -66,7 +67,10 @@ class SoundService : BaseService() {
                 sendBroadcast(i)
 
                 remoteViews?.setTextViewText(R.id.tv_timer, formattedTime)
-                manager?.notify(NOTIFICATION_ID, builder?.build())
+                try {
+                    manager?.notify(NOTIFICATION_ID, builder?.build())
+                } catch (e: NullPointerException) {
+                }
             }
         }.start()
     }
@@ -77,7 +81,10 @@ class SoundService : BaseService() {
         sendBroadcast(i)
 
         remoteViews?.setTextViewText(R.id.tv_timer, "")
-        manager?.notify(NOTIFICATION_ID, builder?.build())
+        try {
+            manager?.notify(NOTIFICATION_ID, builder?.build())
+        } catch (e: NullPointerException) {
+        }
     }
 
     fun sendStartSound() {
@@ -85,6 +92,7 @@ class SoundService : BaseService() {
         i.putExtra("countdown", SERVICE_STARTED)
         sendBroadcast(i)
     }
+
     fun sendStopSound() {
         val i = Intent(COUNTDOWN_UPDATED)
         i.putExtra("countdown", SERVICE_STOPPED)
@@ -169,6 +177,14 @@ class SoundService : BaseService() {
 
     private fun startForegroundService(soundId: String) {
 
+        builder = notificationBuilder(soundId)
+
+        startForeground(
+            NOTIFICATION_ID, builder?.build()
+        )
+    }
+
+    private fun notificationBuilder(soundId: String) : NotificationCompat.Builder {
         val intent = Intent(this, SoundCombinationActivity::class.java)
         intent.action = ACTION_FROM_PUSH
         intent.putExtra("soundId", soundId)
@@ -194,7 +210,7 @@ class SoundService : BaseService() {
         remoteViews?.setOnClickPendingIntent(R.id.iv_pause, pendingPauseIntent)
         remoteViews?.setOnClickPendingIntent(R.id.iv_stop, pendingStopIntent)
         remoteViews?.setTextViewText(R.id.tv_status, getSoundName(soundId))
-        builder = NotificationCompat.Builder(this, channelId)
+        return NotificationCompat.Builder(this, channelId)
             .setWhen(System.currentTimeMillis())
             .setContentTitle("Meditation Sounds")
             .setSmallIcon(R.drawable.ic_settings_black_24dp)
@@ -202,10 +218,6 @@ class SoundService : BaseService() {
             .setPriority(Notification.PRIORITY_MAX)
             .setFullScreenIntent(pendingIntent, true)
             .setContent(remoteViews)
-
-        startForeground(
-            NOTIFICATION_ID, builder?.build()
-        )
     }
 
 
