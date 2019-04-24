@@ -50,6 +50,16 @@
                     android:id="@+id/rv_sounds"
                     android:nestedScrollingEnabled="false"
                     android:layout_height="wrap_content"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/activity_settings_more_free_sounds"
+                    android:id="@+id/tv_go_play_market"
+                    android:background="@color/settings_item_background_color"
+                    android:padding="16dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" android:gravity="center_horizontal"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
     <com.google.android.gms.ads.AdView
