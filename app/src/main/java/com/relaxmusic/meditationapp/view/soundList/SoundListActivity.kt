@@ -1,6 +1,7 @@
 package com.relaxmusic.meditationapp.view.soundList
 
 import android.os.Bundle
+import com.google.ads.mediation.admob.AdMobAdapter
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -26,7 +27,20 @@ class SoundListActivity : BaseActivity() {
     // milisec * sec * min * hours * days
     val TIME_TO_NEXT_RATE_MESSAGE = 1000 * 60 * 60 * 24 * 3
     val NUMBER_OF_FREE_ADS = 1
+    val isForChildren = false
+    val maxContentRating = "PG"
 
+
+    private fun buildRequest() =
+        AdRequest.Builder()
+            .addTestDevice("0DC86204419E0F6C995FC85EB3744EAF").apply {
+                if (isForChildren) {
+                    val extras = Bundle()
+                    extras.putString("max_ad_content_rating", maxContentRating)
+                    this.addNetworkExtrasBundle(AdMobAdapter::class.java, extras)
+                        .tagForChildDirectedTreatment(true)
+                }
+            }.build()
 
     fun isLocked(soundId: String): Boolean {
         if (preferences().isPurchased()) return false
@@ -41,7 +55,7 @@ class SoundListActivity : BaseActivity() {
             }
 
             override fun onAdFailedToLoad(errorCode: Int) {
-                _soundInterstitalAd.loadAd(AdRequest.Builder().build())
+                _soundInterstitalAd.loadAd(buildRequest())
             }
 
             override fun onAdOpened() {
@@ -54,7 +68,7 @@ class SoundListActivity : BaseActivity() {
                 preferences().addUnlockedSound(soundId)
                 toast(preferences().getUnlockedSounds().size.toString())
                 _soundAdapter.notifyItemChanged(_soundAdapter.soundsIds.indexOf(soundId))
-                _soundInterstitalAd.loadAd(AdRequest.Builder().build())
+                _soundInterstitalAd.loadAd(buildRequest())
                 openUnlockedSound(soundId)
             }
         }
@@ -88,17 +102,14 @@ class SoundListActivity : BaseActivity() {
         if (!preferences().isPurchased()) {
             _soundInterstitalAd.adUnitId = getString(R.string.admob_initaial_sound_id)
             _soundInterstitalAd.loadAd(
-                AdRequest.Builder()
-                    .addTestDevice("0DC86204419E0F6C995FC85EB3744EAF").build()
+                buildRequest()
             )
             interstitialAd.adUnitId = getString(R.string.admob_initaial_interstitial_id)
             interstitialAd.loadAd(
-                AdRequest.Builder()
-                    .addTestDevice("0DC86204419E0F6C995FC85EB3744EAF").build()
+                buildRequest()
             )
 
-            val adRequest = AdRequest.Builder().addTestDevice("0DC86204419E0F6C995FC85EB3744EAF").build()
-            banner.loadAd(adRequest)
+            banner.loadAd(buildRequest())
         }
 
         if (!preferences().getPolicyAccepted()) {
@@ -113,7 +124,7 @@ class SoundListActivity : BaseActivity() {
                 }
 
                 override fun onAdFailedToLoad(errorCode: Int) {
-                    interstitialAd.loadAd(AdRequest.Builder().build())
+                    interstitialAd.loadAd(buildRequest())
                 }
 
                 override fun onAdOpened() {
@@ -124,7 +135,7 @@ class SoundListActivity : BaseActivity() {
 
                 override fun onAdClosed() {
                     _initialAdWatched = true
-                    interstitialAd.loadAd(AdRequest.Builder().build())
+                    interstitialAd.loadAd(buildRequest())
                 }
             }
         }
