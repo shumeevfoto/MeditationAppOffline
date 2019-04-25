@@ -1,5 +1,8 @@
 package com.relaxmusic.meditationapp.view.soundList
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import com.google.ads.mediation.admob.AdMobAdapter
 import com.google.android.gms.ads.AdListener
@@ -12,6 +15,7 @@ import com.relaxmusic.meditationapp.base.BaseActivity
 import com.relaxmusic.meditationapp.view.onboarding.OnboardingActivity
 import com.relaxmusic.meditationapp.view.settings.SettingsActivity
 import com.relaxmusic.meditationapp.view.soundCombination.SoundCombinationActivity
+import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_sound_list.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -154,6 +158,21 @@ class SoundListActivity : BaseActivity() {
         rv_sounds.adapter = _soundAdapter
         iv_settings.setOnClickListener {
             startActivity<SettingsActivity>()
+        }
+
+        tv_go_play_market.setOnClickListener {
+            val appPackageName = getString(R.string.play_market_developer_id)
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://developer?id=$appPackageName")))
+            } catch (anfe: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://play.google.com/store/apps/developer?id=$appPackageName")
+                    )
+                )
+            }
+
         }
     }
 
